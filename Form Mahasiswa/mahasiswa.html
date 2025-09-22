@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Form Mahasiswa</title>
+  </head>
+  <body class="min-h-screen">
+    <div class=" text-center p-8">
+      <h1 class="text-blue-500 text-3xl font-bold">Form Data Mahasiswa</h1>
+      <h3 class="font-semibold">Isi data diri, Nama mata kuliah, Nilai mata kuliah, dan Dosen pengajar</h3>
+    </div>
+    
+    <section id="form-mahasiswa" class="container mx-auto bg-gray-100 p-4 rounded-md shadow-lg mb-8">
+      <!-- FORM INPUTAN DATA MAHASISWA -->
+      <div id="biodata-mahasiswa">
+        <h2 class="text-blue-600 font-bold text-xl">Biodata Mahasiswa</h2>
+        <p class="border-b pb-1 bg-gray-300"></p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 mt-4 gap-6">
+          <div>
+            <label for="Nim" class="block py-2 text-lg font-bold">NIM</label>
+            <input id="nim" type="text" placeholder="Masukkan NIM" required 
+            class="block w-full p-2 shadow-md rounded-md focus:outline-blue-500">
+          </div>
+          <div>
+            <label for="Nama" class="block py-2 text-lg font-bold">Nama Lengkap</label>
+            <input id="nama" type="text" placeholder="Nama Lengkap" required
+            class="block w-full p-2 shadow-md rounded-md focus:outline-blue-500">
+          </div>
+          <div>
+            <label for="Email" class="block py-2 text-lg font-bold">Masukkan Email</label>
+            <input id="email" type="text" placeholder="Masukkan Email" required
+            class="block w-full p-2 shadow-md rounded-md focus:outline-blue-500">
+          </div>
+          <div>
+            <label for="Telepon" class="block py-2 text-lg font-bold">Masukkan Nomor Telepon</label>
+            <input id="telepon" type="number" placeholder="Masukkan Nomor Telepon" required 
+            class="block w-full p-2 shadow-md rounded-md focus:outline-blue-500">
+          </div>
+          <div>
+            <label for="Jurusan" class="block py-2 text-lg font-bold">Masukkan Jrusan</label>
+            <select id="jurusan" type="option" placeholder="Nama Lengkap" required
+            class="block w-full p-2 shadow-md rounded-md appearance-none focus:outline-blue-500">
+              <option value="">- Masukkan Jurusan -</option>
+              <option value="Teknik Informatika">Teknik Informatika</option>
+              <option value="Sistem Informasi">Sistem Informasi</option>
+              <option value="Ilmu Komputer">Ilmu Komputer</option>
+              <option value="Manajemen Komputer">Manajemen Komputer</option>
+            </select>
+          </div>
+          <div>
+            <label for="Semester" class="block py-2 text-lg font-bold">Semester</label>
+            <input id="semester" type="number" placeholder="Semester" required 
+            class="block w-full p-2 shadow-md rounded-md">
+          </div>
+        </div>
+
+          <!-- FORM DOSEN DAN NILAI MATKUL -->
+        <div id="dosen-nilai-matkul" class="">
+          <h2 class="text-blue-600 font-bold text-xl mt-8">Dosen dan Nilai Mata Kuliah</h2>
+          <p class="border-b pb-1 bg-gray-300"></p>
+          <div id="form-nilai" class="form-nilai px-4 border-2 mt-4">
+            <!-- FORM DOSEN -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 mt-4 gap-6">
+            <div>
+              <label for="Dosen" class="block py-2 text-lg font-bold">Pilih Dosen Pengajar</label>
+                <select id="dosen" type="option" placeholder="Dosen Pengajar" required
+                class="dosen block w-full p-2 shadow-md rounded-md appearance-none focus:outline-blue-500">
+                   <option value="">- Pilih Dosen -</option>
+                    <option value="Dr. Ahmad Santoso, M.Kom.">
+                      Dr. Ahmad Santoso, M.Kom.
+                    </option>
+                    <option value="Prof. Siti Rahayu, M.T.">
+                      Prof. Siti Rahayu, M.T.
+                    </option>
+                    <option value="Diana Pratiwi, M.Kom.">
+                      Diana Pratiwi, M.Kom.
+                    </option>
+                    <option value="Budi Setiawan, M.T.">
+                      Budi Setiawan, M.T.
+                    </option>
+                    <option value="Dr. Rina Wijaya, M.Sc.">
+                      Dr. Rina Wijaya, M.Sc.
+                    </option>
+                </select>
+            </div>
+              <div>
+                <label for="matKul" class="block py-2 text-lg font-bold">Pilih Mata Kuliah</label>
+                <select id="matKul" type="option" placeholder="Mata Kuliah" required
+                class="matKul block w-full appearance-none p-2 shadow-md rounded-md focus:outline-blue-500">
+                  <option value="">- Pilih Mata Kuliah -</option>
+                  <option value="Pemrograman Front End">Pemrograman Front End</option>
+                  <option value="Pemrograman Back End">Pemrograman Back End</option>
+                  <option value="Pengaturan UI/UX">Pengaturan UI/UX</option>
+                  <option value="Struktur Data">Struktur Data</option>
+                  <option value="Pengaturan Database">Pengaturan Database</option>
+                  <option value="Manajemen">Manajemen</option>
+                  <option value="Matematika">Matematika</option>
+                  <option value="Bahasa Inggris">Bahasa Inggris</option>
+                  <option value="Pancasila">Pancasila</option>
+               </select>
+            </div>
+            </div>
+
+           <!-- FORM NILAI MATA KULIAH -->
+            <div class="grid grid-cols-2 sm:grid-cols-5 mt-4 gap-4 mb-4">
+              <div>
+                <label for="nilaiTugas" class="block py-2 font-bold text-lg ">Nilai Tugas</label> 
+                <input type="number" id="nilaiTugas" placeholder="1-100" min="0" max="100" required
+                class="nilaiTugas w-full p-2 shadow-md rounded-md focus:outline-blue-500">
+              </div>
+              <div>
+                <label for="nilaiUTS" class="block py-2 font-bold text-lg ">Nilai UTS</label> 
+                <input type="number" id="nilaiUTS" placeholder="1-100" min="0" max="100" required
+                class="nilaiUTS w-full p-2 shadow-md rounded-md focus:outline-blue-500">
+              </div>
+              <div>
+                <label for="nilaiUAS" class="block py-2 font-bold text-lg ">Nilai UAS</label> 
+                <input type="number" id="nilaiUAS" placeholder="1-100" min="0" max="100" required
+                class="nilaiUAS w-full p-2 shadow-md rounded-md focus:outline-blue-500">
+              </div>
+              <div>
+                <label for="nilaiAkhir" class="block py-2 font-bold text-lg ">Nilai Akhir</label> 
+                <input type="number" id="nilaiAkhir" placeholder="Nilai Akhir" readonly
+                class="nilaiAkhir w-full p-2 bg-gray-300 shadow-md rounded-md focus:outline-blue-500">
+              </div>
+              <div>
+                <label for="nilaiHuruf" class="block py-2 font-bold text-lg ">Nilai Huruf</label> 
+                <input type="text" id="nilaiHuruf" placeholder="Nilai Huruf" readonly
+                class="nilaiHuruf w-full p-2 bg-gray-300 shadow-md rounded-md focus:outline-blue-500">
+              </div>
+            </div>
+
+            <div class="flex justify-end py-4">
+              <button onclick="hapusNilai()" 
+              class="bg-red-500 px-2 py-1 rounded-md font-semibold text-white hover:bg-red-700">Hapus</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex justify-between mt-4 gap-4">
+          <button type="button" onclick="tambahNilai()" 
+          class="bg-blue-500 px-2 py-1 rounded-md font-semibold text-white hover:bg-blue-700">+ Tambah Nilai Mata Kuliah</button>
+          <button onclick="simpanData()"
+          class="bg-green-500 p-2 rounded-md font-bold text-white hover:bg-green-700">SIMPAN DATA</button>
+          <button onclick="printPDF()"
+          class="bg-red-400 p-2 rounded-md font-bold text-white hover:bg-red-600">Print to PDF</button>
+          <button onclick="resetForm()"
+          class="bg-gray-500 p-2 rounded-md font-bold text-white hover:bg-gray-700">RESET FORM</button>
+        </div>
+       
+      </div>
+    </section>
+
+    <!-- Preview Data -->
+  <section>
+    <div id="biodata-preview" class="no-print"></div>
+    
+    
+
+  </section>
+
+
+    <section id="" class="hidden container mx-auto bg-gray-100 p-4 rounded-md shadow-lg mb-8">
+      <div class="flex justify-between">
+        <h2 class="text-blue-500 font-bold text-xl">Preview Data Mahasiswa</h2>
+        <button onclick="printPDF()" class="px-2 py-1 bg-red-400 hover:bg-red-500 rounded-md font-semibold text-white">Print to PDF</button>    
+      </div>
+      <p class="border-b pb-1 bg-gray-300 mt-2"></p> 
+      <div id="preview-content"></div>
+
+      <!-- Preview Content akan dimasukkan di Javascript -->
+      <div>
+        <h2 class="mt-4 font-bold text-xl">Biodata Mahasiswa</h2>
+        <table class="min-w-full" id="biodata-view">
+          <tr><td class="py-2 px-4 border-b font-medium">NIM</td><td class="py-2 px-4 border-b">${data.biodata.nim}</td></tr>
+          <tr><td class="py-2 px-4 border-b font-medium">Nama</td><td class="py-2 px-4 border-b">${data.biodata.nama}</td></tr>
+          <tr><td class="py-2 px-4 border-b font-medium">Email</td><td class="py-2 px-4 border-b">${data.biodata.email}</td></tr>
+          <tr><td class="py-2 px-4 border-b font-medium">Telepon</td><td class="py-2 px-4 border-b">${data.biodata.telepon}</td></tr>
+          <tr><td class="py-2 px-4 border-b font-medium">Jurusan</td><td class="py-2 px-4 border-b">${data.biodata.jurusan}</td></tr>
+          <tr><td class="py-2 px-4 border-b font-medium">Semester</td><td class="py-2 px-4 border-b">${data.biodata.semester}</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2 class="mt-4 font-bold text-xl">Nilai Mata Kuliah</h2>
+          <table class="min-w-full mt-4 " id="nilai-preview">
+            <thead class="nilai-preview">
+              <tr class="bg-gray-300 font-semibold ">
+                <th class="border-2 text-left py-2 px-4">Mata Kuliah</th>
+                <th class="border-2 text-left py-2 px-4">Dosen</th>
+                <th class="border-2 py-2 px-4">Tugas</th>
+                <th class="border-2 py-2 px-4">UTS</th>
+                <th class="border-2 py-2 px-4">UAS</th>
+                <th class="border-2 py-2 px-4">Nilai Akhir</th>
+                <th class="border-2 py-2 px-4">Nilai Huruf</th>
+              </tr>
+            </thead>
+            <tbody class="min-w-full bg-white">
+              <tr class="text-center ">
+                <td class="text-sm text-left px-4 py-2">1</td>
+                <td class="text-sm text-left px-4 py-2">2</td>
+                <td class="text-sm px-4 py-2">3</td>
+                <td class="text-sm px-4 py-2">4</td>
+                <td class="text-sm px-4 py-2">5</td>
+                <td class="text-sm px-4 py-2">6</td>
+                <td class="text-sm px-4 py-2">7</td>
+              </tr>
+            </tbody>
+          </table>    
+      </div>
+      
+    </section>
+
+    <section>
+        <div class="flex justify-center p-8">
+            <button class="modal p-4 bg-blue-500 rounded-xl text-white font-bold" popovertarget="modalOpen">
+                Choose Project
+            </button>
+            <div class="p-6 rounded-xl shadow-lg" id="modalOpen" popover="">
+                <h2 class="font-bold mb-4">Pilih Contoh Project</h2>
+                <ol class="list-decimal">
+                    <li><a class="border-b-2" href="/To Do list/todo.html">To Do List</a></li>
+                    <li><a class="border-b-2" href="/Calculator/calculator.html">Calculator</a></li>
+                    <li><a class="border-b-2" href="/Form Mahasiswa/mahasiswa.html">Form Mahasiswa</a></li>
+                </ol>               
+                <button class="px-2 mt-2 text-white rounded-md bg-red-500" popovertarget="modalOpen">Close</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="/Form Mahasiswa/mahasiswa.js"></script>
+    <div id="root"></div>
+    <!-- <script type="module" src="/src/main.jsx"></script> -->
+  </body>
+</html>

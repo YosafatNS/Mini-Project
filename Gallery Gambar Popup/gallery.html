@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <section id="container">
+        <div class="gallery-box">
+            <h1>GALLERY</h1>
+            <div class="gallery-img">
+                <div  class="gallery-card">
+                    <img onclick="popupCard(this)" src="https://picsum.photos/id/1015/150/150" alt="gambar 1">
+                    <h3>Tidak ada</h3>
+                </div>
+                <div  class="gallery-card">
+                    <img onclick="popupCard(this)" src="https://picsum.photos/id/1016/150/150" alt="gambar 2">
+                    <h3>Tidak ada</h3>
+                </div>
+                <div  class="gallery-card">
+                    <img onclick="popupCard(this)" src="https://picsum.photos/id/1018/150/150" alt="gambar 3">
+                    <h3>Tidak ada</h3>
+                </div>
+                <div  class="gallery-card">
+                    <img onclick="popupCard(this)" src="https://picsum.photos/id/1020/150/150" alt="gambar 4">
+                    <h3>Tidak ada</h3>
+                </div>
+                <div  class="gallery-card">
+                    <img onclick="popupCard(this)" src="https://picsum.photos/id/1024/150/150" alt="gambar 5">
+                    <h3>Tidak ada</h3>
+                </div>
+                <div  class="gallery-card">
+                    <img onclick="popupCard(this)" src="https://picsum.photos/id/1025/150/150" alt="gambar 6">
+                    <h3>Tidak ada</h3>
+                </div>
+                <div  class="gallery-card">
+                    <img onclick="popupCard(this)" src="https://picsum.photos/id/1028/150/150" alt="gambar 1">
+                    <h3>Tidak ada</h3>
+                </div>
+                <div class="gallery-card">
+                    <img onclick="popupCard(this)" src="https://picsum.photos/id/1031/150/150" alt="gambar 1">
+                    <h3>Tidak ada</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="popupGallery">
+            <button onclick="closeGallery()" class="closeGallery" href="">&times;</button>
+            <img class="contentGallery" src="" alt="">
+        </div>
+    </section>
+
+    <section>
+        <div class="box">
+            <button class="modal" popovertarget="modalOpen">
+                Choose Project
+            </button>
+            <div id="modalOpen" popover="">
+                <h2>Pilih Project</h2>
+                <ol class="move">
+                    <li><a class="move-list" href="/To Do list/todo.html">To Do List</a></li>
+                    <li><a class="move-list" href="/Calculator/calculator.html">Calculator</a></li>
+                    <li><a class="move-list" href="/Form Mahasiswa/mahasiswa.html">Form Mahasiswa</a></li>
+                    <li><a class="move-list" href="/Gallery Gambar Popup/gallery.html">Gallery Popup</a></li>
+                </ol> 
+                <button id="closeModal" popovertarget="modalOpen">Close</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="gallery.js"></script>
+</body>
+</html>

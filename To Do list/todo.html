@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <section class="main-container">
+    <div class="todo">      
+      <h1 class="main-title">TO DO LIST</h1>
+      <div class="todo-body">
+          <textarea type="text" id="kegiatan" class="kegiatan-input" placeholder="Masukkan Kegiatan..."></textarea>
+            <label for="">Pilih Kategori</label>
+            <select name="kategori" id="kategori">
+                <option value="">- Kategori -</option>
+                <option value="kebersihan">Kebersihan</option>
+                <option value="pekerjaan">Pekerjaan</option>
+                <option value="masak">Masak</option>
+                <option value="olahraga">Olahraga</option>
+                <option value="belajar">Belajar</option>
+            </select>
+            <label for="">Pilih Tanggal dan Waktu</label>
+            <div class="tanggal-waktu">
+                <input class="tanggal" type="date" placeholder="Tanggal">
+                <input id="waktu" class="waktu" type="time" step="60"> 
+            </div>
+            <div class="cek-urgensi">
+                <p>Apakah Urgent ?</p>
+                <input class="cek" type="checkbox">
+            </div>
+            
+          <button onclick="kegiatanAdd()" class="kegiatan-add">Simpan</button>
+          <button onclick="viewList()" class="view-list">Lihat List</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="preview-container">
+    <div class="view-todo">
+        <h2 class="view-title">List</h2>
+        <div class="view-body">
+            <div class="view-item">
+                <p style="text-align:center; font-size:20px;"> 
+                BELUM ADA ISINYA </p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="box">
+            <button class="modal" popovertarget="modalOpen">
+                Choose Project
+            </button>
+            <div id="modalOpen" popover="">
+                <h2 class="modal-title">Pilih Contoh Project</h2>
+                <ol class="move">
+                    <li><a class="move-list" href="/To Do list/todo.html">To Do List</a></li>
+                    <li><a class="move-list" href="/Calculator/calculator.html">Calculator</a></li>
+                    <li><a class="move-list" href="/Form Mahasiswa/mahasiswa.html">Form Mahasiswa</a></li>
+                </ol>               
+                <button class="modalClose" popovertarget="modalOpen">Close</button>
+            </div>
+        </div>
+  </section>
+
+  <section></section>
+  <script src="todo.js"></script>
+</body>
+</html>

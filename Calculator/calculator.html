@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calclualtor.css">
+</head>
+<body>
+       <h1 class="title">KALKULATOR</h1>
+       <div id="clock">00:00:00</div>
+    <div class="container">
+        <div class="kalkulator">
+            
+            <div class="preview-hasil">
+                <input class="view-hasil" type="text" placeholder="0" readonly>
+            </div>
+            <div class="tombol">
+                <button class="angka">1</button>
+                <button class="angka">2</button>
+                <button class="angka">3</button>
+                <button class="operator bagi"> / </button>
+
+                <button class="angka">4</button>
+                <button class="angka">5</button>
+                <button class="angka">6</button>
+                <button class="operator kali"> X </button>
+                
+                <button class="angka">7</button>
+                <button class="angka">8</button>
+                <button class="angka">9</button>
+                <button class="operator minus"> - </button>
+
+                <button class="angka">0</button>
+                <button class="angka">.</button>
+                <button class="operator plus"> + </button>
+                <button class="operator persen">% </button>
+
+                <button class="reset">C</button>
+                <button class="delete">Del.</button>
+                <button class="hasil">=</button>
+            </div>
+        </div>
+
+        
+    </div>
+       <h2 class="title-history">History</h2>
+       <div class="history">
+            <div class="isi-history"></div>
+            <button class="clear">Clear</button> 
+        </div>
+   
+        <div class="box">
+            <button class="modal" popovertarget="modalOpen">
+                Choose Project
+            </button>
+            <div id="modalOpen" popover="">
+                <h2 class="modal-title">Pilih Contoh Project</h2>
+                <ol class="move">
+                    <li><a class="move-list" href="/To Do list/todo.html">To Do List</a></li>
+                    <li><a class="move-list" href="/Calculator/calculator.html">Calculator</a></li>
+                    <li><a class="move-list" href="/Form Mahasiswa/mahasiswa.html">Form Mahasiswa</a></li>
+                </ol>               
+                <button class="modalClose" popovertarget="modalOpen">Close</button>
+            </div>
+        </div>
+        
+        <script src="calculator.js"></script>
+</body>
+</html>

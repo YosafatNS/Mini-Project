@@ -1,0 +1,140 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-box {
+    text-align: center;
+    padding: 20px;    
+    width: 720px;
+    border-radius: 10px;
+    background: rgb(162, 162, 162);
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-box h1 {
+    font-size: x-large;
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.gallery-img {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;   
+    justify-items: center;
+}
+
+.gallery-img img{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popupGallery {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+}
+
+.contentGallery {
+    max-width: 90%;
+    max-height: 80%;
+    background-color: whitesmoke;
+    padding: 20px;
+    box-shadow: 0 0 15px #000;
+}
+
+.closeGallery {
+    position: absolute;
+    color: white;
+    top: 20px;
+    left: 90%;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.modal {
+    background-color: rgb(93, 93, 93);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: large;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+}
+
+#modalOpen {
+    padding-inline: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
+    
+}
+
+#modalOpen:popover-open {
+  animation: bounce 0.4s ease forwards;
+}
+
+/* Efek bounce */
+@keyframes bounce {
+  0%   { transform: scale(0.95); opacity: 0;}
+  50%  { transform: scale(1); opacity: 1;}
+  70%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.move {
+    font-size: 20px;
+    padding-inline: 20px;
+}
+
+.move-list {
+    text-decoration: none;
+}
+
+#closeModal {
+    display: flex;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: rgb(255, 118, 118);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
