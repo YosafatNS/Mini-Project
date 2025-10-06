@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-amber-50 overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="bg-blue-500">Absensi</title>
+    <link rel="stylesheet" href="">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+@media print {
+  @page {
+    margin: 0; /* hilangkan margin default yang dipakai header/footer */
+  }
+  body {
+    margin: 1cm; /* kasih margin custom biar tidak terlalu mepet */
+  }
+}
+</style>
+
+<body>
+    <section id="">
+        <div class="flex items-center justify-center p-12">
+            <div class=" p-8 bg-white rounded-md shadow-md">
+                <h2 class="text-center text-lg font-bold">ABSENSI</h2>
+                <div class="flex flex-col">
+                    <label for="" class="mb-2">Nama Karyawan</label>
+                    <input type="text" id="nama" class="nama border-2 p-2 w-80 rounded-md" placeholder="Masukkan Nama">
+                </div>
+                <div class="flex flex-col">
+                    <label for="" class="py-2">Jabatan</label>
+                    <select name="jabatan" id="jabatan" class="jabatan p-2 border-2 rounded-md w-80">
+                        <option value="">Masukkan Jabatan</option>
+                        <option value="Manager">Manager</option>
+                        <option value="SPV">SPV</option>
+                        <option value="Staff">Staff</option>
+                        <option value="Produksi">Produksi</option>
+                        <option value="Satpam">Satpam</option>
+                        <option value="Umum">Umum</option>
+                    </select>
+                </div>
+                <div class="flex flex-col">
+                    <label for="" class="py-2">Status</label>
+                    <select name="status" id="status" class="status p-2 border-2 rounded-md w-80">
+                        <option value="">Masukkan Kehadiran</option>
+                        <option value="Masuk">Masuk</option>
+                        <option value="Izin">Izin</option>
+                        <option value="Sakit">Sakit</option>
+                        <option value="Pulang Awal">Pulang Awal</option>
+                        <option value="Terlambat">Terlambat</option>
+                        <option value="Alasan">Alasan</option>
+                    </select>
+                </div>
+                <div class="flex mt-4 justify-between">
+                    <button onclick="tambahAbsensi()"
+                    class="p-2 bg-blue-500 text-white font-bold rounded-lg transition duration-300 ease-in hover:bg-blue-700">
+                    Simpan</button>
+                    <button onclick="printPDF()"
+                    class="p-2 bg-red-500 text-white font-bold rounded-lg transition duration-300 ease-in hover:bg-red-700">
+                    Print PDF</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="daftarAbsensi">
+        <div class="flex justify-center">
+            <table class="table-fixed w-full max-w-5xl text-white">
+                <thead>
+                    <tr>
+                        <th class="p-2 bg-blue-500 border-2 w-10">No</th>
+                        <th class="p-2 bg-blue-500 border-2 w-60">Nama</th>
+                        <th class="p-2 bg-blue-500 border-2 w-40">Jabatan</th>
+                        <th class="p-2 bg-blue-500 border-2 w-20">Tanggal</th>
+                        <th class="p-2 bg-blue-500 border-2 w-20">Waktu</th>
+                        <th class="p-2 bg-blue-500 border-2 w-20">Status</th>
+                        <th class="action p-2 bg-blue-500 border-2 w-20">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableAbsensi"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="absensi.js"></script>
+
+    <section>
+        <div class="flex justify-center p-8">
+            <button class="modal p-4 bg-green-500 rounded-xl text-white font-bold transition ease-in duration-300 hover:bg-green-700" 
+            popovertarget="modalOpen">Choose Project
+            </button>
+            <div class="p-6 rounded-xl shadow-lg" id="modalOpen" popover="">
+                <h2 class="font-bold mb-4">Pilih Contoh Project</h2>
+                <ol class="list-decimal px-4 mb-4">
+                    <li><a class="border-b-2" href="/Mini-Project/To-Do-list/todo.html">To Do List</a></li>
+                    <li><a class="border-b-2" href="/Mini-Project/Calculator/calculator.html">Calculator</a></li>
+                    <li><a class="border-b-2" href="/Mini-Project/Form-Mahasiswa/mahasiswa.html">Form Mahasiswa</a></li>
+                    <li><a class="border-b-2" href="/Mini-Project/Gallery-Popup/gallery.html">Gallery Popup</a></li>
+                    <li><a class="border-b-2" href="/Mini-Project/Absensi/absensi.html">Absensi</a></li>
+                </ol>               
+                <button class="px-2 mt-2 text-white rounded-md bg-red-500" popovertarget="modalOpen">Close</button>
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>
